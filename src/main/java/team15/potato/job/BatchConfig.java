@@ -43,7 +43,7 @@ public class BatchConfig {
     public Step testStep() {
         return stepBuilderFactory.get("testStep")
                 .tasklet((contribution, chunkContext) -> {
-                    // peopleListApiService.insertPeople();
+                    peopleListApiService.insertPeople();
                     movieListApiService.insertMovie();
                     return RepeatStatus.FINISHED;
                 })
