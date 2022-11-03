@@ -23,7 +23,7 @@ public class MovieListApi {
     private final MovieRepository movieRepository;
 
     // 발급키
-    String key = "f4a1f8683e73052acc1311dd6392e58c";
+    String key = "60dd3402d40b9f20acf20fe34fb41a1e";
 
     public void movieList() {
         String movieListResponse = "";
@@ -79,7 +79,8 @@ public class MovieListApi {
                     movieSave.setTypeNm((String) movie.get("typeNm"));
                     movieSave.setDirectors(directors);
 
-                    movieRepository.save(movieSave);
+                    if (!movieRepository.existsById(movieSave.getMovieCd()))
+                        movieRepository.save(movieSave);
 
                 }
 
