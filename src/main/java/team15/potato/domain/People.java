@@ -26,4 +26,7 @@ public class People {
 
     /*필모리스트*/
     private String filmoNames;
+
+    /*성별*/
+    private String sex;
 }

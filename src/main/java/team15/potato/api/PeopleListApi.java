@@ -24,7 +24,7 @@ public class PeopleListApi {
     private final PeopleRepository peopleRepository;
 
     // 발급키
-    String key = "f4a1f8683e73052acc1311dd6392e58c";
+    String key = "60dd3402d40b9f20acf20fe34fb41a1e";
 
     public void peopleList() {
         String peopleResponse = "";
